@@ -8,11 +8,10 @@ app = Flask(__name__)
 
 # Paths
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CITY_DAY_CSV = os.path.join(BASE_DIR, "CITY_DAY.csv")
-STATION_DAY_CSV = os.path.join(BASE_DIR, "STATION_DAY.csv")
-CITY_HOUR_CSV = os.path.join(BASE_DIR, "CITY_HOUR.csv")
-STATION_HOUR_CSV = os.path.join(BASE_DIR, "STATION_HOUR.csv")
-RISK_SCORES_CSV = os.path.join(BASE_DIR, "city_risk_scores.csv")
+CITY_DAY_CSV = os.path.join(BASE_DIR, "city_day.csv")
+STATION_DAY_CSV = os.path.join(BASE_DIR, "station_day.csv")
+CITY_RISK_SCORES_CSV = os.path.join(BASE_DIR, "city_risk_scores.csv")
+STATIONS_CSV = os.path.join(BASE_DIR, "stations.csv")
 
 # Load CSVs
 def load_csv_safe(path, rename_map=None):
@@ -114,3 +113,4 @@ def dashboard():
 
 if __name__=="__main__":
     app.run(debug=True)
+
